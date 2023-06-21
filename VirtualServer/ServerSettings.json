@@ -1,0 +1,11 @@
+﻿{
+    "Port": 2280,
+    "SocketTimeout": 10000,
+    "TTL": 1,
+    "ReuseAddress": true,
+    "SecuitySettings": {
+        "UseDifferentKeyForEachLifetime": true,
+        "Lifetime": 86400,
+        "KeySize": 8192
+    }
+}

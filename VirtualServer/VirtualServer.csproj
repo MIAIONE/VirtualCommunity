@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<UserSecretsId>dotnet-VirtualServer-28ac6fa3-1b15-49e6-bada-59b6de67b2ca</UserSecretsId>
+		<StartupObject>VirtualServer.EntryPoint.Export</StartupObject>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <Content Remove="ServerSettings.json" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Include="ServerSettings.json">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="LiteDB" Version="5.0.16" />
+		<PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.1" />
+		<PackageReference Include="StreamJsonRpc" Version="2.15.29" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\VirtualLog\VirtualLog.csproj" />
+	</ItemGroup>
+
+</Project>
